@@ -6,6 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Amount</title>
   </head>
+  <style>
+  #navbar{
+      display:flex;
+      justify-content: space-between;
+  } 
+  #add-money {
+    text-align: center;
+    line-height: 80px;
+  }
+  #amount {
+    width: 30%;
+    height: 25px;
+  }
+  button {
+    padding: 6px 10px;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  </style>
   <body>
     <div id="navbar">
       <h1>Add Money to wallet</h1>
@@ -16,7 +37,7 @@
       <!-- input box for accepting money with id as "amount" -->
       <input type = "number" id = "amount" placeholder="Enter amount" />
       <!-- button with id as "add_to_wallet" -->
-      <button onclick = "insertAmount()" id = "add_to_wallet">add to wallet</button>
+      <button id = "add_to_wallet">Add to Wallet</button>
       <!-- button with id as "book_movies" to go to movies.html -->
       <button id = "book_movies"><a href = "movies.html">Book movies</a></button>
     </div>

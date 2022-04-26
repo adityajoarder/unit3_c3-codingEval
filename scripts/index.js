@@ -1,16 +1,23 @@
 // Store the wallet amount to your local storage with key "amount"
 
-function insertAmount(){
-    let amt = document.getElementById("amount").value;
+document.getElementById("add_to_wallet").addEventListener("click", add);
 
-    let amts = JSON.parse(localStorage.getItem("amount")) || [];
-
-    amts.push(amt);
-
-    localStorage.setItem("amount", JSON.stringify(amts));
-
-    document.getElementById("amount").value = null;
-
-
+let wallet = document.getElementById("wallet")
+let wallet_balance = JSON.parse(localStorage.getItem("amount"))
+if(wallet_balance==null) {
+    wallet.innerText = 0;
+    wallet_balance = 0;
+}else {
+    wallet.innerText = wallet_balance;
 }
 
+let balance;
+
+function add(){
+    balance = wallet_balance;
+    let addBalance = document.getElementById("amount").value;
+    addBalance = +addBalance
+    balance += addBalance;
+    localStorage.setItem("amount", JSON.stringify(balance))
+    window.location.reload();
+}

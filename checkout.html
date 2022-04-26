@@ -6,16 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout</title>
   </head>
+  <style>
+    #navbar{
+      display:flex;
+      justify-content: space-between;
+    }
+    #user-detail, #movie {
+    text-align: center;
+    }
+    #movie{
+    margin-top: 50px;
+    }
+    input{
+      width:20%;
+      height:30px;
+    }
+    #confirm{
+      height:36px;
+      width:8%
+    }
+  </style>
   <body>
     <div id="navbar">
       <h1>Checkout | Cost: 100/seat</h1>
       <!-- Display the wallet amount here inside h1 tag with id as "wallet". Note only amount, no extra text. Like 500 not Rs 500 -->
+      <h1 id="wallet"></h1>
     </div>
     <div id="user-detail">
       <!-- input field to accept user name with id as "user_name"  -->
       <input type="text" id="user_name" placeholder="Enter username" />
       <!-- input field to accept number of seats with id as "number_of_seats"  -->
-      <input type="number" id="number_of_seats" />
+      <input type="number" id="number_of_seats" placeholder="Number of Tickets" />
       <!-- A submit button to confirm booking with id as "confirm"  -->
       <button id="confirm">Confirm Booking</button>
     </div>
@@ -27,3 +48,4 @@
     </div>
   </body>
 </html>
+<script src="/scripts/checkout.js"></script>
